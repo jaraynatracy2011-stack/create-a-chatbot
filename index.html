@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic 8 Ball Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div class="title-wrap">
+        <p class="eyebrow">Mystic Advice</p>
+        <h1>Magic 8 Ball Chatbot</h1>
+      </div>
+
+      <section class="magic-ball-panel">
+        <div class="magic-ball" aria-live="polite">
+          <div class="ball-shine"></div>
+          <div class="ball-answer">
+            <span id="answerText">Ask me anything</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chat-card">
+        <form id="chatForm" class="chat-form">
+          <label for="questionInput" class="sr-only">Ask a question</label>
+          <input
+            id="questionInput"
+            type="text"
+            placeholder="Ask the Magic 8 Ball..."
+            maxlength="150"
+            autocomplete="off"
+          />
+          <button type="submit">Shake</button>
+        </form>
+
+        <div class="chat-log" id="chatLog" aria-live="polite">
+          <div class="message bot">
+            <span class="name">Magic 8 Ball:</span>
+            <p>Ask a question and I will reveal the truth.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
